@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pukeko Painters</title>
+
+    <link rel="stylesheet" href="Style/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="wave1"></div>
+    <div class="wave2"></div>
+    <div class="wave3"></div>
+
+    <img src="Images/LOGO.png" alt="Pukeko Painters Logo" class="logo">
+
+    <h1>Pukeko Painters</h1>
+    <p>Painting with Precision and Quality Finishes.</p>
+
+    <div class="button-container">
+        <button onclick="openTab('painters')"><strong>Painters</strong></button>
+        <button onclick="openTab('social')"><strong>Social</strong></button>
+        <button onclick="openTab('info')"><strong>Information</strong></button>
+        <button onclick="openTab('phone')"><strong>Phone</strong></button>
+        <button onclick="openTab('specialties')"><strong>Specialties</strong></button>
+        <button onclick="openTab('gallery')"><strong>Gallery</strong></button>
+    </div>
+
+    <!-- Painters -->
+    <div id="painters" class="tab-content">
+        <div class="section-divider">
+            <div class="line"></div>
+            <i class="fa-solid fa-paint-roller"></i>
+            <div class="line"></div>
+        </div>
+
+        <h2>Painters</h2>
+        <p>Jamie Parsons.</p>
+    </div>
+
+    <!-- Social -->
+    <div id="social" class="tab-content">
+        <div class="section-divider">
+            <div class="line"></div>
+            <i class="fa-solid fa-share-nodes"></i>
+            <div class="line"></div>
+        </div>
+
+        <h2>Social</h2>
+        <p>
+            Follow us on Facebook:<br>
+            https://www.facebook.com/profile.php?id=61567429853620
+        </p>
+    </div>
+
+    <!-- Information -->
+    <div id="info" class="tab-content">
+        <div class="section-divider">
+            <div class="line"></div>
+            <i class="fa-solid fa-circle-info"></i>
+            <div class="line"></div>
+        </div>
+
+        <h2>Information</h2>
+        <p>We are a local painting company based in Napier New Zealand.</p>
+    </div>
+
+    <!-- Phone -->
+    <div id="phone" class="tab-content">
+        <div class="section-divider">
+            <div class="line"></div>
+            <i class="fa-solid fa-phone"></i>
+            <div class="line"></div>
+        </div>
+
+        <h2>Phone</h2>
+        <p>
+            Call us at: 0210 844 2529<br><br>
+
+            Message us at: pukekopainter@gmail.com<br><br>
+
+            Facebook and socials: Pukeko Painters
+        </p>
+    </div>
+
+    <!-- Specialties -->
+    <div id="specialties" class="tab-content">
+        <div class="section-divider">
+            <div class="line"></div>
+            <i class="fa-solid fa-star"></i>
+            <div class="line"></div>
+        </div>
+
+        <h2>Specialties</h2>
+
+        <p>
+            <strong>Decks</strong><br>
+            I have painted or stained many decks old and new.<br><br>
+
+            <strong>Fences/Walls</strong><br>
+            I have painted many fences and walls old and new.<br><br>
+
+            <strong>External Painting</strong><br>
+            I have painted 50+ houses including weatherboards, Hardie boards, stucco, doors and windows.<br><br>
+
+            <strong>Internal Painting</strong><br>
+            Ceilings, walls, skirtings, doors and windows. Enamel and water-based finishes.
+        </p>
+    </div>
+
+<!-- Gallery -->
+<div id="gallery" class="tab-content">
+
+    <div class="section-divider">
+        <div class="line"></div>
+        <i class="fa-solid fa-image"></i>
+        <div class="line"></div>
+    </div>
+
+    <h2>Gallery</h2>
+
+    <div class="gallery-grid">
+        <img src="Images/house3.jpg" alt="House">
+        <img src="Images/house4.jpg" alt="House">
+        <img src="Images/house5.jpg" alt="House">
+        <img src="Images/house6.jpg" alt="House">
+        <img src="Images/house7.jpg" alt="House">
+        <img src="Images/house8.jpg" alt="House">
+    </div>
+
+</div>
+
+    <div class="features">
+
+        <div class="feature">
+            <i class="fa-solid fa-house"></i>
+            <h3>Quality Finishes</h3>
+            <p>
+                Professional interior and exterior painting with attention to every detail.
+            </p>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Reliable Service</h3>
+            <p>
+                Honest, dependable and committed to completing every job properly.
+            </p>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h3>Experienced Painter</h3>
+            <p>
+                Over 50 homes painted including weatherboards, decks, fences and interiors.
+            </p>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <h3>Customer Focused</h3>
+            <p>
+                Your satisfaction is our priority from preparation to the final coat.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(id) {
+            document.querySelectorAll(".tab-content").forEach(tab => {
+                tab.style.display = "none";
+            });
+
+            const selected = document.getElementById(id);
+
+            if (selected) {
+                if (id === "gallery") {
+                    selected.style.display = "flex";
+                } else {
+                    selected.style.display = "block";
+                }
+            }
+        }
+
+        window.onload = function () {
+            openTab("painters");
+        };
+    </script>
+
+</body>
+</html>
